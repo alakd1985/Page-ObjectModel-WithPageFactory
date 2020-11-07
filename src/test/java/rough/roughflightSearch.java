@@ -12,7 +12,8 @@ public class roughflightSearch {
 		// ".\\src\\test\\resources\\driver\\chromedriver.exe");
 		PageFac.initconfiguration();
 		ExpediaHomePage homePage1 = new ExpediaHomePage();
-		homePage1.gotoFlights();
+		homePage1.gotoFlights().bookaFlight("dulles", "barcelona");
+
 		PageFac.quitbrowser();
 	}
 

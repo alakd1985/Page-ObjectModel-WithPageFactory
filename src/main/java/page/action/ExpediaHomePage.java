@@ -1,6 +1,7 @@
 package page.action;
 
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import base.PageFac;
 import page.locator.HomePageLocators;
@@ -10,11 +11,14 @@ public class ExpediaHomePage extends PageFac {
 
 	public ExpediaHomePage() {
 		this.home = new HomePageLocators();
-		PageFactory.initElements(driver, this.home);
+		AjaxElementLocatorFactory aj = new AjaxElementLocatorFactory(driver, 10);
+		PageFactory.initElements(aj, this.home);
 	}
 
-	public void gotoFlights() {
+	// important concepts
+	public ExpediaHomePage gotoFlights() {
 		home.flighttab.click();
+		return this;
 
 	}
 
@@ -22,7 +26,9 @@ public class ExpediaHomePage extends PageFac {
 
 	}
 
-	public void bookaFlight(String from, String to, String returning) {
+	public void bookaFlight(String from, String to) {
+		home.leavingFrom.sendKeys(from);
+		home.destination.sendKeys(to);
 
 	}
 }
