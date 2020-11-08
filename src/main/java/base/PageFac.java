@@ -12,12 +12,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.ExcelReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import page.action.Topnavigation;
 
 public class PageFac {
+
 	public static WebDriver driver;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static ExcelReader excel = new ExcelReader(".\\src\\test\\resources\\excel\\testdata.xlsx");
 	public static WebDriverWait wait;
+	public static Topnavigation topnav;
 	// public ExtentReports reports = ExtentManager.getInstance();
 
 	public static void initconfiguration() {
@@ -49,6 +52,7 @@ public class PageFac {
 		}
 		driver.get(Constants.testsite_url);
 		driver.manage().window().maximize();
+		topnav = new Topnavigation();
 
 	}
 

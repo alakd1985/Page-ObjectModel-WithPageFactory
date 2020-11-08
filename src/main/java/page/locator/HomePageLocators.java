@@ -5,12 +5,18 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePageLocators {
 
-	@FindBy(xpath = "//span[contains(text(),'Flights')]")
-	public WebElement flighttab;
+	@FindBy(xpath = "//input[@id='nBSy-destination-airport']")
+	public WebElement leavingTo;
 
-	@FindBy(xpath = "//button[@aria-label='Leaving from']")
+	@FindBy(xpath = "//input[@id='nBSy-origin-airport']")
 	public WebElement leavingFrom;
 
-	@FindBy(xpath = "//button[@aria-label='Going to']")
-	public WebElement destination;
+	@FindBy(xpath = "//button[@id='MFUH-travelersAboveForm-dialog-trigger']")
+	public WebElement adultDropdown;
+
+	@FindBy(xpath = "//div[contains(text(),'Adult')]")
+	public WebElement travelers;
+
+	@FindBy(xpath = "//a[@aria-label='Search for flights']")
+	public WebElement flighttab;
 }

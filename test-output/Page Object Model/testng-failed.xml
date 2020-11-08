@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Page Object Model]">
+  <test thread-count="5" name="Sign In Test(failed)">
+    <classes>
+      <class name="TestCase.SignInTest">
+        <methods>
+          <include name="signIntest"/>
+        </methods>
+      </class> <!-- TestCase.SignInTest -->
+    </classes>
+  </test> <!-- Sign In Test(failed) -->
+</suite> <!-- Failed suite [Page Object Model] -->

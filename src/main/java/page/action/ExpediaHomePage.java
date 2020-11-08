@@ -16,10 +16,15 @@ public class ExpediaHomePage extends PageFac {
 	}
 
 	// important concepts
-	public ExpediaHomePage gotoFlights() {
-		home.flighttab.click();
-		return this;
 
+	public void gotoFlights() {
+		home.flighttab.click();
+		// return this;
+
+	}
+
+	public void travelers() {
+		home.adultDropdown.click();
 	}
 
 	public void gotoHotels() {
@@ -27,8 +32,10 @@ public class ExpediaHomePage extends PageFac {
 	}
 
 	public void bookaFlight(String from, String to) {
+		home.leavingFrom.click();
 		home.leavingFrom.sendKeys(from);
-		home.destination.sendKeys(to);
+		home.leavingTo.click();
+		home.leavingTo.sendKeys(to);
 
 	}
 }
